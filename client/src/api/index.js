@@ -28,6 +28,7 @@ export const getallusers = () => API.get("/user/getallusers");
 export const updateprofile = (id, updatedata) =>
   API.patch(`/user/update/${id}`, updatedata);
 
+<<<<<<< HEAD
 // Questions APIs
 export const postquestion = (questiondata) =>
   API.post("/questions/Ask", questiondata);
@@ -35,6 +36,7 @@ export const getallquestions = () => API.get("/questions/get");
 export const deletequestion = (id) => API.delete(`/questions/delete/${id}`);
 export const votequestion = (id, value) =>
   API.patch(`/questions/vote/${id}`, { value });
+
 
 // Answers APIs
 export const postanswer = (
@@ -56,3 +58,7 @@ export const deleteanswer = (id, answerid, noofanswers) =>
     answerid,
     noofanswers,
   });
+=======
+export const postanswer=(id,noofanswers,answerbody,useranswered,userid)=>API.patch(`/answer/post/${id}`,{noofanswers,answerbody,useranswered,userid});
+export const deleteanswer=(id,answerid,noofanswers)=>API.patch(`/answer/delete/${id}`,{answerid,noofanswers});
+>>>>>>> 72376a5 (Edirprofileform.jsx)
