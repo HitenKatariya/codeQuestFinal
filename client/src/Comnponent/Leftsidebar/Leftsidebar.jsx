@@ -37,6 +37,11 @@ const Leftsidebar = ({ slidein }) => {
             <p >Users</p>
             </NavLink>
           </button>
+          <button className='nav-btnn'>
+            <NavLink to='/publicspace' className='side-nav-links' activeclassname='active' style={{paddingLeft:"40px"}}>
+              <p>Public Space</p>
+            </NavLink>
+          </button>
         </div>
       </nav>
     </div>
