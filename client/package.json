@@ -23,9 +23,13 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-toastify": "^11.0.5",
 =======
 >>>>>>> 72376a5 (Edirprofileform.jsx)
+=======
+    "react-toastify": "^11.0.5",
+>>>>>>> 1e3091e (first commit)
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "ua-parser-js": "^2.0.3",
