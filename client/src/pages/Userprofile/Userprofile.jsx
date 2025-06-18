@@ -143,7 +143,7 @@ const Userprofile = ({ slidein }) => {
                       {users.filter(u => currentprofile.friends.some(fid => String(fid) === String(u._id))).map(friend => (
                         <li key={friend._id} style={{display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
                           {friend.avatar ? (
-                            <img src={friend.avatar.startsWith('http') ? friend.avatar : `http://localhost:5000${friend.avatar}`} alt="avatar" style={{width: '30px', height: '30px', borderRadius: '50%', objectFit: 'cover', marginRight: '10px'}} />
+                            <img src={friend.avatar.startsWith('http') ? friend.avatar : `https://codequestfinal.onrender.com${friend.avatar}`} alt="avatar" style={{width: '30px', height: '30px', borderRadius: '50%', objectFit: 'cover', marginRight: '10px'}} />
                           ) : (
                             <Avatar backgroundColor="purple" color="white" fontSize="16px" px="10px" py="5px">{friend.name?.charAt(0)?.toUpperCase()}</Avatar>
                           )}
