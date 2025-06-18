@@ -121,7 +121,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 app.post('/upload-avatar', upload.single('avatar'), (req, res) => {
-  res.json({ imageUrl: `http://localhost:5000/uploads/${req.file.filename}` });
+  res.json({ imageUrl: `https://codequestfinal.onrender.com/uploads/avatar.png
+` });
 });
 >>>>>>> 72376a5 (Edirprofileform.jsx)
 =======
