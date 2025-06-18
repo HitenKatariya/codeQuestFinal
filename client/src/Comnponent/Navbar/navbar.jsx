@@ -35,7 +35,7 @@ function Navbar({ handleslidein }) {
     const avatarUrl = User?.result?.avatar
         ? (User.result.avatar.startsWith('http')
             ? User.result.avatar
-            : `http://localhost:5000${User.result.avatar}`)
+            : `https://codequestfinal.onrender.com${User.result.avatar}`)
         : null;
 
     const handlelogout = () => {
