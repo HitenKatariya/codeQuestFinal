@@ -37,7 +37,7 @@ const Editprofileform = ({ currentuser, setswitch }) => {
         currentuser?.result?.avatar
           ? (currentuser.result.avatar.startsWith('http')
               ? currentuser.result.avatar
-              : `http://localhost:5000${currentuser.result.avatar}`)
+              : `https://codequestfinal.onrender.com${currentuser.result.avatar}`)
           : '/default-avatar.png'
       );
     }
