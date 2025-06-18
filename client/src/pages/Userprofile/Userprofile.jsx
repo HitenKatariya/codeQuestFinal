@@ -31,13 +31,13 @@ const Userprofile = ({ slidein }) => {
 
   const handleAddFriend = async () => {
     try {
-      await axios.post('http://localhost:5000/user/addfriend', {
+      await axios.post('https://codequestfinal.onrender.com/user/addfriend', {
         userId: currentuser?.result?._id,
         friendId: currentprofile._id
       });
       
       // Get the updated user data
-      const { data } = await axios.get(`http://localhost:5000/user/${currentuser?.result?._id}`);
+      const { data } = await axios.get(`https://codequestfinal.onrender.com/user/${currentuser?.result?._id}`);
       
       // Update Redux and localStorage
       dispatch({ type: "FETCH_CURRENT_USER", payload: { result: data } });
@@ -76,7 +76,7 @@ const Userprofile = ({ slidein }) => {
                     src={
                       currentprofile.avatar.startsWith('http')
                         ? currentprofile.avatar
-                        : `http://localhost:5000${currentprofile.avatar}`
+                        : `https://codequestfinal.onrender.com${currentprofile.avatar}`
                     }
                     alt="avatar"
                     style={{
