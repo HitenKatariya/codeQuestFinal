@@ -35,11 +35,7 @@ function Navbar({ handleslidein }) {
     const avatarUrl = User?.result?.avatar
         ? (User.result.avatar.startsWith('http')
             ? User.result.avatar
-<<<<<<< HEAD
             : `${process.env.REACT_APP_API_URL}${User.result.avatar}`)
-=======
-            : `https://codequestfinal.onrender.com${User.result.avatar}`)
->>>>>>> 5e61c587716133c814de136ae9820d7dc499616e
         : null;
 
     const handlelogout = () => {
@@ -102,8 +98,4 @@ function Navbar({ handleslidein }) {
     )
 }
 
-<<<<<<< HEAD
 export default Navbar
-=======
-export default Navbar
->>>>>>> 5e61c587716133c814de136ae9820d7dc499616e

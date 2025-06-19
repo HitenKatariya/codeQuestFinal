@@ -10,11 +10,7 @@ const LoginHistory = ({ userId }) => {
       if (!profile?.token) return;
       try {
         const { data } = await axios.get(
-<<<<<<< HEAD
           `${process.env.REACT_APP_API_URL}/user/login-history/${userId}`,
-=======
-          `http://localhost:5000/user/login-history/${userId}`,
->>>>>>> 5e61c587716133c814de136ae9820d7dc499616e
           { headers: { Authorization: `Bearer ${profile.token}` } }
         );
         setHistory(data);
