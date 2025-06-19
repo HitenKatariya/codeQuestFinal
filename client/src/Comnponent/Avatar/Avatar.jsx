@@ -27,11 +27,9 @@ function Avatar({
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden"
-    };
-
-    return avatar ? (
+    };    return avatar ? (
         <img
-            src={avatar}
+            src={avatar?.startsWith('http') ? avatar : `${process.env.REACT_APP_API_URL}${avatar}`}
             alt="avatar"
             style={{
                 width: size,

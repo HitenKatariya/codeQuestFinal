@@ -31,13 +31,13 @@ const Userprofile = ({ slidein }) => {
 
   const handleAddFriend = async () => {
     try {
-      await axios.post('http://localhost:5000/user/addfriend', {
+      await axios.post(`${process.env.REACT_APP_API_URL}/user/addfriend`, {
         userId: currentuser?.result?._id,
         friendId: currentprofile._id
       });
       
       // Get the updated user data
-      const { data } = await axios.get(`http://localhost:5000/user/${currentuser?.result?._id}`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/user/${currentuser?.result?._id}`);
       
       // Update Redux and localStorage
       dispatch({ type: "FETCH_CURRENT_USER", payload: { result: data } });
@@ -76,7 +76,7 @@ const Userprofile = ({ slidein }) => {
                     src={
                       currentprofile.avatar.startsWith('http')
                         ? currentprofile.avatar
-                        : `http://localhost:5000${currentprofile.avatar}`
+                        : `${process.env.REACT_APP_API_URL}${currentprofile.avatar}`
                     }
                     alt="avatar"
                     style={{
@@ -143,7 +143,7 @@ const Userprofile = ({ slidein }) => {
                       {users.filter(u => currentprofile.friends.some(fid => String(fid) === String(u._id))).map(friend => (
                         <li key={friend._id} style={{display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
                           {friend.avatar ? (
-                            <img src={friend.avatar.startsWith('http') ? friend.avatar : `http://localhost:5000${friend.avatar}`} alt="avatar" style={{width: '30px', height: '30px', borderRadius: '50%', objectFit: 'cover', marginRight: '10px'}} />
+                            <img src={friend.avatar.startsWith('http') ? friend.avatar : `${process.env.REACT_APP_API_URL}${friend.avatar}`} alt="avatar" style={{width: '30px', height: '30px', borderRadius: '50%', objectFit: 'cover', marginRight: '10px'}} />
                           ) : (
                             <Avatar backgroundColor="purple" color="white" fontSize="16px" px="10px" py="5px">{friend.name?.charAt(0)?.toUpperCase()}</Avatar>
                           )}
