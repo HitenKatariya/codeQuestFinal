@@ -17,11 +17,7 @@ const Qustiondetails = () => {
     const user =useSelector((state)=>state.currentuserreducer)
     const location=useLocation()
     const navigate=useNavigate()
-<<<<<<< HEAD
     const url="https://codequestfinal.onrender.com"
-=======
-    const url="http://localhost:3000"
->>>>>>> 5e61c587716133c814de136ae9820d7dc499616e
     const handlepostans=(e,answerlength)=>{
         e.preventDefault();
         if(user ===null){
