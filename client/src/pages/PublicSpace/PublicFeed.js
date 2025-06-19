@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from 'react-redux';
 
+<<<<<<< HEAD
 const API_BASE = process.env.REACT_APP_API_URL;
+=======
+const API_BASE = "https://codequestfinal.onrender.com";
+>>>>>>> 5e61c587716133c814de136ae9820d7dc499616e
 
 const PublicFeed = () => {
   const reduxUser = useSelector((state) => state.currentuserreducer?.result);
